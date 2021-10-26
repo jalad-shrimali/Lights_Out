@@ -21,3 +21,7 @@ class Actor(models.Model):
 		if not self.slug:
 			self.slug = slugify(self.name)
 		return super().save(*args, **kwargs)
+print ("ikshit")
+print ("ikshit")
+print ("ikshit")
+# this is cmnt
