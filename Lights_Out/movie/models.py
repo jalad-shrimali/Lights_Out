@@ -9,6 +9,20 @@ from django.urls import reverse
 
 from django.contrib.auth.models import User
 # Create your models here.
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+
+	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
 
 class Genre(models.Model):
 	title = models.CharField(max_length=25)
@@ -25,6 +39,12 @@ class Genre(models.Model):
 			self.title.replace(" ", "")
 			self.slug = slugify(self.title)
 		return super().save(*args, **kwargs)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
 
 class Rating(models.Model):
 	source = models.CharField(max_length=50)
@@ -37,6 +57,15 @@ class Movie(models.Model):
 	Title = models.CharField(max_length=200)
 	Year = models.CharField(max_length=25, blank=True)
 	Rated = models.CharField(max_length=10, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
+	Released = models.CharField(max_length=25, blank=True)
 	Released = models.CharField(max_length=25, blank=True)
 	Runtime = models.CharField(max_length=25, blank=True)
 	Genre = models.ManyToManyField(Genre, blank=True)
@@ -56,6 +85,10 @@ class Movie(models.Model):
 	imdbID = models.CharField(max_length=100, blank=True)
 	Type = models.CharField(max_length=10, blank=True)
 	DVD = models.CharField(max_length=25, blank=True)
+	imdbVotes = models.CharField(max_length=100, blank=True)
+	imdbVotes = models.CharField(max_length=100, blank=True)
+	imdbVotes = models.CharField(max_length=100, blank=True)
+	imdbVotes = models.CharField(max_length=100, blank=True)
 	BoxOffice = models.CharField(max_length=25, blank=True)
 	Production = models.CharField(max_length=100, blank=True)
 	Website = models.CharField(max_length=150, blank=True)
@@ -81,6 +114,7 @@ RATE_CHOICES = [
 	(2, '2 - Horrible'),
 	(3, '3 - Terrible'),
 	(4, '4 - Bad'),
+	imdbVotes = models.CharField(max_length=100, blank=True)
 	(5, '5 - OK'),
 	(6, '6 - Watchable'),
 	(7, '7 - Good'),
@@ -102,6 +136,10 @@ class Review(models.Model):
 	def __str__(self):
 		return self.user.username
 
+	(8, '8 - Very Good'),
+	(8, '8 - Very Good'),
+	(8, '8 - Very Good'),
+	(8, '8 - Very Good'),
 class Likes(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_like')
 	type_like = models.PositiveSmallIntegerField()
