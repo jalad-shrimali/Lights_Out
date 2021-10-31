@@ -15,6 +15,13 @@ from django.contrib.auth.models import User
 	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
 	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
 	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
+	from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+from django.test import TestCase
+
 	rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
 
 class Genre(models.Model):
@@ -32,6 +39,12 @@ class Genre(models.Model):
 			self.title.replace(" ", "")
 			self.slug = slugify(self.title)
 		return super().save(*args, **kwargs)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
+			self.slug = slugify(self.title)
 
 class Rating(models.Model):
 	source = models.CharField(max_length=50)
